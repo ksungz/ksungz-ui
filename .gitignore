@@ -28,3 +28,4 @@ public/icons.svg
 *.njsproj
 *.sln
 *.sw?
+.vercel
