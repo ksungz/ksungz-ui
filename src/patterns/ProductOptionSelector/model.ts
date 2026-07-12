@@ -19,6 +19,7 @@ export interface ProductVariant {
 
 export interface Product {
   id: string
+  brand: string
   name: string
   description: string
   basePrice: number

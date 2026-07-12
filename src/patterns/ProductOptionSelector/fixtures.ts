@@ -1,9 +1,10 @@
 import type { Product } from './model'
 
 export const dailyRunnerProduct: Product = {
-  id: 'daily-runner-02',
-  name: '데일리 러너 02',
-  description: '도심 러닝과 가벼운 산책에 맞춘 쿠셔닝 러닝화',
+  id: 'triumph-running-shoe',
+  brand: 'SAUCONY',
+  name: '트라이엄프 러닝화',
+  description: '장거리 러닝을 위한 데일리 쿠셔닝 러닝화',
   basePrice: 129000,
   image: {
     src: '/products/daily-runner.jpg',
@@ -42,7 +43,7 @@ export const dailyRunnerProduct: Product = {
 
 export const longNameProduct: Product = {
   ...dailyRunnerProduct,
-  id: 'daily-runner-long-name',
-  name: '데일리 러너 02 리플렉티브 메시 한정 컬러',
+  id: 'triumph-running-shoe-long-name',
+  name: '트라이엄프 러닝화 와이드핏 리플렉티브 컬러',
   description: '야간 시인성을 높인 반사 소재와 통기성 메시를 함께 사용한 러닝화',
 }

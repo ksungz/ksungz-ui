@@ -63,7 +63,7 @@ function ProductOptionCaseStudy() {
 
       <footer>
         상품 이미지는 Mostafa Mahmoudi가 촬영한 Unsplash 이미지를 사용했다.
-        상품명과 옵션·재고 데이터는 이 사례를 위해 별도로 작성했다.
+        옵션·재고 데이터는 이 사례를 위해 별도로 작성했다.
       </footer>
     </article>
   )

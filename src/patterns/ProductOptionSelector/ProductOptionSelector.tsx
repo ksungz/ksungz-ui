@@ -340,7 +340,7 @@ function ProductPage({
 
           <div className={styles.productDetails}>
             <div className={styles.productHeading}>
-              <p>DAILY RUNNING</p>
+              <p>{product.brand}</p>
               <h1 id="product-name">{product.name}</h1>
               <span>{product.description}</span>
               <strong>{formatPrice(product.basePrice)}</strong>
