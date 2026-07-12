@@ -2,7 +2,7 @@
   "name": "ksungz-ui",
   "private": true,
   "version": "0.2.0",
-  "description": "Accessible React components for responsive product interfaces.",
+  "description": "반응형 서비스 UI의 상태와 검증 기준을 정리한 React 컴포넌트 프로젝트",
   "type": "module",
   "scripts": {
     "dev": "vite",

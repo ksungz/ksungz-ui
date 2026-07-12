@@ -15,9 +15,9 @@ const colors = [
 function Foundations() {
   return (
     <main className={styles.docsPage}>
-      <h1>Foundations</h1>
-      <p>Tokens keep hierarchy stable across components. Color is reserved for meaning; spacing follows a four-pixel base scale.</p>
-      <h2>Color</h2>
+      <h1>기초 토큰</h1>
+      <p>컴포넌트가 달라도 위계가 흔들리지 않도록 공통 토큰을 사용합니다. 색상은 의미 전달에 사용하고, 간격은 4px 단위로 구성했습니다.</p>
+      <h2>색상</h2>
       <div className={styles.colorGrid}>
         {colors.map(([name, color, value]) => (
           <div className={styles.swatch} key={name}>
@@ -26,19 +26,19 @@ function Foundations() {
           </div>
         ))}
       </div>
-      <h2>Typography</h2>
+      <h2>타이포그래피</h2>
       <div className={styles.typeScale}>
-        <div><code>Display · 32</code><strong style={{ fontSize: 'var(--ks-font-size-700)' }}>Release readiness</strong></div>
-        <div><code>Heading · 24</code><strong style={{ fontSize: 'var(--ks-font-size-600)' }}>Component queue</strong></div>
-        <div><code>Body · 16</code><span style={{ fontSize: 'var(--ks-font-size-400)' }}>Clear labels make operational decisions faster.</span></div>
-        <div><code>Caption · 12</code><span style={{ fontSize: 'var(--ks-font-size-100)' }}>UPDATED 4 MINUTES AGO</span></div>
+        <div><code>Display · 32</code><strong style={{ fontSize: 'var(--ks-font-size-700)' }}>배포 준비 상태</strong></div>
+        <div><code>Heading · 24</code><strong style={{ fontSize: 'var(--ks-font-size-600)' }}>컴포넌트 검토 목록</strong></div>
+        <div><code>Body · 16</code><span style={{ fontSize: 'var(--ks-font-size-400)' }}>명확한 이름은 화면을 검토하는 시간을 줄입니다.</span></div>
+        <div><code>Caption · 12</code><span style={{ fontSize: 'var(--ks-font-size-100)' }}>4분 전 업데이트</span></div>
       </div>
     </main>
   )
 }
 
 const meta = {
-  title: 'Foundations/Tokens',
+  title: '기초/토큰',
   component: Foundations,
   parameters: { layout: 'fullscreen', controls: { disable: true } },
 } satisfies Meta<typeof Foundations>
@@ -47,3 +47,4 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Tokens: Story = {}
+Tokens.storyName = '토큰'
