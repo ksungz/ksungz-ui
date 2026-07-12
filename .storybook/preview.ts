@@ -15,7 +15,7 @@ const preview: Preview = {
     layout: 'centered',
     options: {
       storySort: {
-        order: ['Overview', 'Foundations', 'Components', 'Patterns', 'Case Studies'],
+        order: ['소개', '기초', '컴포넌트', '패턴', '구현 사례'],
       },
     },
   },

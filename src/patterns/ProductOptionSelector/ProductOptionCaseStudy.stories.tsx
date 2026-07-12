@@ -25,6 +25,17 @@ function ProductOptionCaseStudy() {
       </section>
 
       <section>
+        <h2>데이터와 화면 상태의 흐름</h2>
+        <ol className={styles.stateFlow}>
+          <li><span>01</span><div><strong>상품 데이터</strong><p>색상, 사이즈, 조합별 재고와 추가 금액을 받는다.</p></div></li>
+          <li><span>02</span><div><strong>선택 상태</strong><p>사용자가 고른 색상, 사이즈, 수량만 별도로 관리한다.</p></div></li>
+          <li><span>03</span><div><strong>조합 판정</strong><p>선택한 조합의 재고와 단가를 순수 함수로 계산한다.</p></div></li>
+          <li><span>04</span><div><strong>화면 반영</strong><p>품절, 재고 부족, 오류, 최종 가격을 같은 기준으로 표시한다.</p></div></li>
+          <li><span>05</span><div><strong>반응형 전환</strong><p>같은 폼을 데스크톱 구매 패널이나 모바일 바텀시트에 배치한다.</p></div></li>
+        </ol>
+      </section>
+
+      <section>
         <h2>상태를 나눈 기준</h2>
         <div className={styles.tableWrap}>
           <table>
@@ -46,18 +57,34 @@ function ProductOptionCaseStudy() {
           <li><strong>계산 로직을 화면에서 분리했다.</strong><span>재고 판정과 가격 계산을 순수 TypeScript 함수로 두어 UI 없이도 확인할 수 있게 했다.</span></li>
           <li><strong>모바일과 데스크톱에 같은 폼을 사용했다.</strong><span>화면별로 선택 상태가 어긋나지 않도록 현재 뷰포트에 필요한 폼만 렌더링한다.</span></li>
           <li><strong>기본 HTML 의미를 우선했다.</strong><span>옵션 그룹은 fieldset과 radio를 사용하고, Dialog의 포커스 처리는 검증된 primitive에 맡겼다.</span></li>
-          <li><strong>결과를 과장하지 않았다.</strong><span>실제 매출이나 전환율이 없는 공개 예제이므로 구현 범위와 검증 결과만 기록한다.</span></li>
+          <li><strong>확인한 결과만 기록했다.</strong><span>별도의 성과 수치를 만들지 않고 테스트, 접근성 검사, 화면 크기별 확인 결과를 남겼다.</span></li>
         </ol>
       </section>
 
       <section>
-        <h2>확인 항목</h2>
+        <h2>검증 결과</h2>
+        <div className={styles.results}>
+          <div><strong>12</strong><span>단위·상호작용 테스트</span></div>
+          <div><strong>0</strong><span>Storybook 접근성 위반</span></div>
+          <div><strong>3</strong><span>확인한 대표 화면 너비</span></div>
+          <div><strong>통과</strong><span>TypeScript·ESLint·원격 빌드</span></div>
+        </div>
+        <h3>직접 확인한 항목</h3>
         <ul className={styles.checks}>
           <li>옵션 조합별 재고와 추가 금액 단위 테스트</li>
           <li>색상 변경 시 유효하지 않은 사이즈 선택 해제</li>
           <li>키보드만으로 옵션 선택과 수량 변경</li>
           <li>모바일 320px·390px 가로 넘침과 하단 안전 영역</li>
           <li>Storybook 접근성 검사와 원격 빌드</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>코드에서 확인하기</h2>
+        <ul className={styles.codeLinks}>
+          <li><a href="https://github.com/ksungz/ksungz-ui/blob/main/src/patterns/ProductOptionSelector/model.ts" target="_blank" rel="noreferrer"><strong>옵션 계산 모델</strong><span>재고 판정, 가격 계산, 색상 변경 시 선택값 보정</span></a></li>
+          <li><a href="https://github.com/ksungz/ksungz-ui/blob/main/src/patterns/ProductOptionSelector/ProductOptionSelector.tsx" target="_blank" rel="noreferrer"><strong>화면 구현</strong><span>선택 상태, 유효성 검사, 데스크톱·모바일 전환</span></a></li>
+          <li><a href="https://github.com/ksungz/ksungz-ui/blob/main/src/patterns/ProductOptionSelector/ProductOptionSelector.test.tsx" target="_blank" rel="noreferrer"><strong>상호작용 테스트</strong><span>필수값, 품절, 추가 금액, 수량 제한, 장바구니 동작</span></a></li>
         </ul>
       </section>
 
@@ -70,7 +97,8 @@ function ProductOptionCaseStudy() {
 }
 
 const meta = {
-  title: 'Case Studies/상품 옵션 선택',
+  id: 'case-studies-상품-옵션-선택',
+  title: '구현 사례/상품 옵션 선택',
   component: ProductOptionCaseStudy,
   parameters: { layout: 'fullscreen', controls: { disable: true } },
 } satisfies Meta<typeof ProductOptionCaseStudy>

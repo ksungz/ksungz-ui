@@ -4,7 +4,8 @@ import { longNameProduct } from './fixtures'
 import { ProductOptionSelector } from './ProductOptionSelector'
 
 const meta = {
-  title: 'Patterns/Commerce/상품 옵션 선택',
+  id: 'patterns-commerce-상품-옵션-선택',
+  title: '패턴/커머스/상품 옵션 선택',
   component: ProductOptionSelector,
   parameters: {
     layout: 'fullscreen',
