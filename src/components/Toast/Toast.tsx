@@ -44,7 +44,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
                 </ToastPrimitive.Description>
               )}
             </div>
-            <ToastPrimitive.Close aria-label="Dismiss notification" className={styles.close}>
+            <ToastPrimitive.Close aria-label="알림 닫기" className={styles.close}>
               <X aria-hidden="true" size={18} />
             </ToastPrimitive.Close>
           </ToastPrimitive.Root>

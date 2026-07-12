@@ -11,18 +11,22 @@ export interface DialogSheetProps {
   children: ReactNode
   footer?: ReactNode
   size?: 'sm' | 'md' | 'lg'
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
 }
 
 export function DialogSheet({
   children,
   description,
   footer,
+  onOpenChange,
+  open,
   size = 'md',
   title,
   trigger,
 }: DialogSheetProps) {
   return (
-    <Dialog.Root>
+    <Dialog.Root onOpenChange={onOpenChange} open={open}>
       <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className={styles.overlay} />
@@ -33,7 +37,7 @@ export function DialogSheet({
               <Dialog.Title className={styles.title}>{title}</Dialog.Title>
               {description && <Dialog.Description className={styles.description}>{description}</Dialog.Description>}
             </div>
-            <Dialog.Close aria-label="Close" className={styles.close}>
+            <Dialog.Close aria-label="닫기" className={styles.close}>
               <X aria-hidden="true" size={20} />
             </Dialog.Close>
           </div>

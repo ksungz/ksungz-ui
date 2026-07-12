@@ -31,7 +31,7 @@ export function TextField({
     <div className={cx(styles.field, className)}>
       <label className={styles.label} htmlFor={inputId}>
         {label}
-        {required && <span className={styles.required}>Required</span>}
+        {required && <span className={styles.required}>필수</span>}
       </label>
       <div className={cx(styles.control, error && styles.invalid)}>
         {leadingIcon && <span className={styles.icon}>{leadingIcon}</span>}
