@@ -15,7 +15,7 @@ const preview: Preview = {
     layout: 'centered',
     options: {
       storySort: {
-        order: ['Overview', 'Foundations', 'Components', 'Patterns'],
+        order: ['Overview', 'Foundations', 'Components', 'Patterns', 'Case Studies'],
       },
     },
   },
