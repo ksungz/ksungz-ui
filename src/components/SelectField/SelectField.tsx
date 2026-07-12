@@ -24,7 +24,7 @@ export function SelectField({
   id,
   label,
   options,
-  placeholder = '선택하세요',
+  placeholder = 'Select an option',
   required,
   ...props
 }: SelectFieldProps) {

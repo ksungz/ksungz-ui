@@ -16,7 +16,7 @@ describe('DialogSheet', () => {
     await user.click(screen.getByRole('button', { name: 'Add review' }))
     expect(screen.getByRole('dialog', { name: 'Add UI review' })).toBeVisible()
 
-    await user.click(screen.getByRole('button', { name: '닫기' }))
+    await user.click(screen.getByRole('button', { name: 'Close' }))
     expect(screen.queryByRole('dialog', { name: 'Add UI review' })).not.toBeInTheDocument()
   })
 })

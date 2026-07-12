@@ -33,7 +33,7 @@ export function DialogSheet({
               <Dialog.Title className={styles.title}>{title}</Dialog.Title>
               {description && <Dialog.Description className={styles.description}>{description}</Dialog.Description>}
             </div>
-            <Dialog.Close aria-label="닫기" className={styles.close}>
+            <Dialog.Close aria-label="Close" className={styles.close}>
               <X aria-hidden="true" size={20} />
             </Dialog.Close>
           </div>

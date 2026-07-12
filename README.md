@@ -4,6 +4,8 @@ Accessible React components for responsive product interfaces.
 
 KS UI is a small public component system built to make interaction states and review criteria visible. It focuses on the parts of product UI that are easy to lose during delivery: keyboard behavior, focus movement, responsive interaction changes, error states, and component documentation.
 
+[View the live Storybook](https://ksungz-ui.vercel.app)
+
 ## What is included
 
 - Foundations: color, typography, spacing, radius, shadow, focus, and motion tokens
