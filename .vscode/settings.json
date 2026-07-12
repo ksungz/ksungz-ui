@@ -1,0 +1,12 @@
+{
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/storybook-static/**": true,
+    "**/dist/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/storybook-static": true,
+    "**/dist": true
+  }
+}

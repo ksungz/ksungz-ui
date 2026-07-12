@@ -1,0 +1,173 @@
+.overlay {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background: rgb(21 23 26 / 58%);
+  animation: fadeIn var(--ks-duration-normal) var(--ks-ease-standard);
+}
+
+.content {
+  position: fixed;
+  z-index: 101;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  width: calc(100vw - 2rem);
+  max-height: min(42rem, calc(100dvh - 2rem));
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--ks-color-white);
+  border: 1px solid var(--ks-color-ink-200);
+  border-radius: var(--ks-radius-lg);
+  box-shadow: var(--ks-shadow-md);
+  transform: translate(-50%, -50%);
+  animation: dialogIn var(--ks-duration-normal) var(--ks-ease-standard);
+
+  &[data-state='closed'] {
+    animation: dialogOut var(--ks-duration-fast) var(--ks-ease-standard);
+  }
+}
+
+.sm {
+  max-width: 25rem;
+}
+
+.md {
+  max-width: 32rem;
+}
+
+.lg {
+  max-width: 42rem;
+}
+
+.handle {
+  display: none;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--ks-space-4);
+  padding: var(--ks-space-6) var(--ks-space-6) var(--ks-space-4);
+}
+
+.title {
+  margin: 0;
+  color: var(--ks-color-ink-950);
+  font-size: var(--ks-font-size-500);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.description {
+  margin: var(--ks-space-2) 0 0;
+  color: var(--ks-color-ink-600);
+  font-size: var(--ks-font-size-300);
+  line-height: 1.5;
+}
+
+.close {
+  display: inline-grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  place-items: center;
+  color: var(--ks-color-ink-600);
+  background: transparent;
+  border: 0;
+  border-radius: var(--ks-radius-sm);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--ks-color-ink-950);
+    background: var(--ks-color-ink-100);
+  }
+}
+
+.body {
+  min-height: 0;
+  padding: var(--ks-space-2) var(--ks-space-6) var(--ks-space-6);
+  overflow-y: auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--ks-space-2);
+  padding: var(--ks-space-4) var(--ks-space-6);
+  background: var(--ks-color-ink-50);
+  border-top: 1px solid var(--ks-color-ink-200);
+}
+
+@media (max-width: 40rem) {
+  .content {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    max-height: calc(100dvh - 1.5rem);
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: var(--ks-radius-lg) var(--ks-radius-lg) 0 0;
+    transform: none;
+    animation-name: sheetIn;
+
+    &[data-state='closed'] {
+      animation-name: sheetOut;
+    }
+  }
+
+  .handle {
+    display: block;
+    width: 2.25rem;
+    height: 0.25rem;
+    margin: var(--ks-space-2) auto 0;
+    background: var(--ks-color-ink-300);
+    border-radius: 99px;
+  }
+
+  .header {
+    padding: var(--ks-space-4) var(--ks-space-4) var(--ks-space-3);
+  }
+
+  .body {
+    padding: var(--ks-space-2) var(--ks-space-4) var(--ks-space-5);
+  }
+
+  .footer {
+    padding: var(--ks-space-3) var(--ks-space-4) max(var(--ks-space-3), env(safe-area-inset-bottom));
+
+    > * {
+      flex: 1;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.98);
+  }
+}
+
+@keyframes dialogOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.98);
+  }
+}
+
+@keyframes sheetIn {
+  from { transform: translateY(100%); }
+}
+
+@keyframes sheetOut {
+  to { transform: translateY(100%); }
+}
