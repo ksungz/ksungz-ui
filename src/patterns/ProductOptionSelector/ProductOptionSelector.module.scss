@@ -570,8 +570,7 @@
   }
 
   .sizeOptions {
-    grid-template-columns: repeat(5, minmax(3.25rem, 1fr));
-    overflow-x: auto;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     padding: 2px;
   }
 
