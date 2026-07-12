@@ -11,18 +11,22 @@ export interface DialogSheetProps {
   children: ReactNode
   footer?: ReactNode
   size?: 'sm' | 'md' | 'lg'
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
 }
 
 export function DialogSheet({
   children,
   description,
   footer,
+  onOpenChange,
+  open,
   size = 'md',
   title,
   trigger,
 }: DialogSheetProps) {
   return (
-    <Dialog.Root>
+    <Dialog.Root onOpenChange={onOpenChange} open={open}>
       <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className={styles.overlay} />
