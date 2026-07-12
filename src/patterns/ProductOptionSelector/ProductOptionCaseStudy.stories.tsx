@@ -11,7 +11,7 @@ function ProductOptionCaseStudy() {
           상품상세에서 자주 만나는 옵션 선택 흐름을 공개 가능한 데이터로 다시 구성했다.
           화면 모양보다 옵션 조합과 재고 상태가 바뀔 때 사용자가 놓치기 쉬운 지점을 정리하는 데 초점을 맞췄다.
         </span>
-        <a href="?path=/story/patterns-commerce-상품-옵션-선택--default">구현 화면 보기</a>
+        <a href="/?path=/story/patterns-commerce-상품-옵션-선택--default" target="_top">구현 화면 보기</a>
       </header>
 
       <section>
